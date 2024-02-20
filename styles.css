@@ -1,0 +1,36 @@
+/* Add some fun styles */
+header {
+    background-color: #1E90FF; /* Dodger Blue */
+}
+
+footer {
+    background-color: #1E90FF;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Center-align gallery items */
+}
+
+.portfolio-item {
+    border: 2px solid #1E90FF;
+    padding: 10px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Let's add some animation for extra flair */
+.portfolio-item:hover {
+    transform: scale(1.05); /* Zoom in on hover */
+    transition: transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1E90FF;
+}
