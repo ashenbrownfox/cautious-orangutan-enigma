@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -31,7 +31,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -39,11 +39,37 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.about-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+}
 
+.about-images img {
+    max-width: 100%;
+    height: auto;
+}
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 20px;
+}
+
+.portfolio-item {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Let's add some animation for extra flair */
+.portfolio-item:hover {
+    transform: scale(1.05); /* Zoom in on hover */
+    transition: transform 0.3s ease;
 }
 
 form label {
@@ -69,15 +95,4 @@ form button {
 
 form button:hover {
     background-color: #555;
-}
-
-.portfolio-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Let's add some animation for extra flair */
-.portfolio-item:hover {
-    transform: scale(1.05); /* Zoom in on hover */
-    transition: transform 0.3s ease;
 }
