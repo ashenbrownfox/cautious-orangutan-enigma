@@ -29,6 +29,45 @@ nav ul li a {
 section {
     padding: 50px;
 }
+#intro {
+    background-color: #fff; /* Adjust as needed */
+    text-align: center;
+    padding: 100px 0;
+}
+
+.intro-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.intro-button {
+    padding: 20px 50px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 64, 64);
+    color: #fff;
+    border-radius: 50px;
+}
+
+#marketing-importance {
+    padding: 50px;
+}
+
+.marketing-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.marketing-content h2,
+.marketing-content h3,
+.marketing-content h4 {
+    margin-top: 30px;
+}
+
+.placeholder-image {
+    /* Add styles for placeholder images as needed */
+}
 
 footer {
     background-color: #000000;
