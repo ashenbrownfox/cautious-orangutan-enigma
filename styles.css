@@ -2,7 +2,7 @@
 
 /* Additional styles for smaller screens can be added here */
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -223,13 +223,20 @@ footer {
 /* Styles for smaller screens */
 @media only screen and (max-width: 768px) {
     header {
-        padding: 10px;
+        background-color: #000000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        position: relative; /* Add position relative */
     }
-
+    
     .hamburger {
-        display: block; /* Show the hamburger menu */
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px; /* Adjust as needed */
+        transform: translateY(-50%); /* Center vertically */
     }
-
     .nav-links {
         display: none; /* Hide the nav links by default on mobile */
         flex-direction: column;
@@ -285,5 +292,11 @@ footer {
 
     .tiktok-video {
         padding-top: 56.25%; /* 16:9 aspect ratio for responsive video */
+    }
+    #contact button {
+        width: 100%; /* Make the button fill the width */
+        max-width: 300px; /* Limit the maximum width */
+        margin: 0 auto; /* Center the button horizontally */
+        display: block; /* Ensure it occupies the full width */
     }
 }
