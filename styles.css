@@ -1,4 +1,6 @@
 
+
+/* Additional styles for smaller screens can be added here */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,13 +14,30 @@ header {
     text-align: center;
 }
 
+/* Styles for hamburger menu */
+.hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Styles for nav links */
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -28,7 +47,7 @@ nav ul li a {
 }
 
 section {
-    padding: 50px;
+    padding: 20px;
 }
 #intro {
     background-color: #fff; /* Adjust as needed */
@@ -76,8 +95,9 @@ section {
     margin-top: 30px;
 }
 
-.placeholder-image {
-    /* Add styles for placeholder images as needed */
+.placeholder-image img {
+    max-width: 80%; /* Adjust the percentage as needed */
+    height: auto;
 }
 #features {
     display: grid;
@@ -199,4 +219,71 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+/* Styles for smaller screens */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu */
+    }
+
+    .nav-links {
+        display: none; /* Hide the nav links by default on mobile */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the nav links when active */
+    }
+
+    .nav-links li {
+        margin-right: 0; /* Remove right margin for list items */
+    }
+
+    .intro-content {
+        padding: 50px 20px;
+    }
+
+    .intro-button {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+
+    #marketing-importance {
+        padding: 30px;
+    }
+
+    .marketing-content {
+        padding: 0 10px;
+    }
+    #comparison{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .comparison-item {
+        padding: 15px;
+    }
+
+    #features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-item {
+        padding: 5px;
+    }
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px;
+    }
+
+    .about-images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tiktok-video {
+        padding-top: 56.25%; /* 16:9 aspect ratio for responsive video */
+    }
 }
