@@ -16,20 +16,18 @@ document.addEventListener("DOMContentLoaded", function() {
             contactSection.scrollIntoView({ behavior: 'smooth' });
         });
     }
-    var navLinks = document.querySelectorAll('.nav-links a');
+    var nav = document.querySelector('nav');
     
-    if (navLinks) {
-        navLinks.forEach(function(link) {
-            if (link.getAttribute('href') !== 'letter/') { // Check if the href is not 'letter/'
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var targetId = this.getAttribute('href').substring(1);
-                    var targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
+    if (nav) {
+        nav.addEventListener('click', function(event) {
+            if (event.target.tagName === 'A' && event.target.getAttribute('href') !== 'letter/') {
+                event.preventDefault();
+                var targetId = event.target.getAttribute('href').substring(1);
+                var targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         });
     }
